@@ -17,9 +17,6 @@ import {LocalizationProvider} from "@mui/x-date-pickers/LocalizationProvider";
 
 export default function MobileAccountData({BackState, BackSet}: { BackState: boolean, BackSet: any }) {
 
-
-    const menuOpen = useAppSelector((state) => state.menu.menuAccountOpened);
-
     const dispatch = useAppDispatch();
 
     const [GameState, GameSet] = useState({game: "none", parentDiv: "DontShow"})
@@ -66,7 +63,7 @@ export default function MobileAccountData({BackState, BackSet}: { BackState: boo
                                 GameState.parentDiv = "Show"
                                 GameSet({...GameState})
                             }}>
-                                <button className="button-29" role="button"><Game2048
+                                <button className="button-29"><Game2048
                                     className="h-20 w-20 m-8"/></button>
                             </button>
                             <button onClick={() => {
@@ -74,14 +71,14 @@ export default function MobileAccountData({BackState, BackSet}: { BackState: boo
                                 GameState.parentDiv = "Show"
                                 GameSet({...GameState})
                             }}>
-                                <button className="button-29" role="button"><TicTac className="h-20 w-20 m-8"/>
+                                <button className="button-29"><TicTac className="h-20 w-20 m-8"/>
                                 </button>
                             </button>
                         </div>
                     </div>
                 </div>
             </ElseIf>
-            <ElseIf condition={GameHooks.GameState.parentDiv == "DontShow"}>
+            <ElseIf condition={GameHooks.GameState.parentDiv === "DontShow"}>
                 <div>
 
                     <div className="justifyedGrid">

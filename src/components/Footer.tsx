@@ -10,7 +10,6 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import {ReactComponent as Social} from "../assets/Social.svg";
 import DialogTitle from '@mui/material/DialogTitle';
 import {TransitionProps} from "@mui/material/transitions";
 import {Slide} from "@mui/material";
@@ -27,10 +26,6 @@ const Transition = React.forwardRef(function Transition(
 const Footer: React.FC = () => {
     const [open, setOpen] = React.useState(false);
 
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
     const handleClose = () => {
         setOpen(false);
     };
@@ -38,7 +33,7 @@ const Footer: React.FC = () => {
     return (
       <>
           <div>
-              
+
               <Dialog
                   open={open}
                   TransitionComponent={Transition}

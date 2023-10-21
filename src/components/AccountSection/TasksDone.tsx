@@ -20,10 +20,6 @@ const TasksDone: React.FC = () => {
 
   const percentageAllTasks = (allTasksDone.length * 100) / tasks.length;
 
-  const todaysTasksToShow = todaysTasks.slice(0, 3);
-
-  const showMore = todaysTasks.length > todaysTasksToShow.length;
-
   return (
     <>
       <div className="hidden lg:block">

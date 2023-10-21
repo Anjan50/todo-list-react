@@ -1,7 +1,6 @@
 import {AlertBlock} from "./AlertBlock";
 import DangerousIcon from "@mui/icons-material/Dangerous";
-import React, {useEffect, useState} from "react";
-import { Condition, If } from "../components/Service/condition";
+import { If } from "../components/Service/condition";
 
 export default function WeatherBlock() {
 
